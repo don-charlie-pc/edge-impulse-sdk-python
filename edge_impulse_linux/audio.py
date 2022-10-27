@@ -34,7 +34,7 @@ class Microphone():
                       else:
                           print('That device is not compatible')
 
-        print('selected Audio device: %i'% input_device_name)
+        print('selected Audio device: %s'% input_device_name)
 
     def checkDeviceModelCompatibility(self, device_id):
         supported = False
@@ -63,10 +63,6 @@ class Microphone():
 
         if len(input_devices) == 0:
             raise Exception('There are no audio devices available');
-
-        for i in range (0, len(input_devices)):
-            print("%i --> %s" % input_devices[i])
-
         return input_devices
 
     def __enter__(self):
